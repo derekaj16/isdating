@@ -171,6 +171,7 @@ input[type=checkbox]:checked {
 label {
     padding-left: 10px;
     cursor: pointer;
+    color: rgb(223, 37, 37);
 }
 .select-button {
     display: flex;
