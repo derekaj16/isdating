@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="loading-bar.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="loading-bar.js"></script>
+    
+    <title>IS Dating</title>
+
+</head>
+<body>
+    <header>
+        <div class="header">
+        
+                <svg id="heart1">
+                    <path d="M90.5,23.2c0-12.5-10.2-22.7-22.7-22.7c-13.6,0-20.9,8.6-22.3,13.8C44.3,8.9,35.1,0.5,23.2,0.5C10.7,0.5,0.5,10.7,0.5,23.2c0,22.2,36.5,45.3,45,55.9C53.5,67.3,90.5,46.3,90.5,23.2z"
+                            stroke="rgb(235, 89, 113)" fill="rgb(235, 89, 113)"/>
+                </svg>
+                <svg id="heart2">
+                    <path d="M90.5,23.2c0-12.5-10.2-22.7-22.7-22.7c-13.6,0-20.9,8.6-22.3,13.8C44.3,8.9,35.1,0.5,23.2,0.5C10.7,0.5,0.5,10.7,0.5,23.2c0,22.2,36.5,45.3,45,55.9C53.5,67.3,90.5,46.3,90.5,23.2z"
+                            stroke="rgb(235, 89, 113)" fill="rgb(235, 89, 113)"/>
+                </svg>
+                <svg id="heart3">
+                    <path d="M90.5,23.2c0-12.5-10.2-22.7-22.7-22.7c-13.6,0-20.9,8.6-22.3,13.8C44.3,8.9,35.1,0.5,23.2,0.5C10.7,0.5,0.5,10.7,0.5,23.2c0,22.2,36.5,45.3,45,55.9C53.5,67.3,90.5,46.3,90.5,23.2z"
+                            stroke="rgb(235, 89, 113)" fill="rgb(235, 89, 113)"/>
+                </svg>
+                <svg id="heart4">
+                    <path d="M90.5,23.2c0-12.5-10.2-22.7-22.7-22.7c-13.6,0-20.9,8.6-22.3,13.8C44.3,8.9,35.1,0.5,23.2,0.5C10.7,0.5,0.5,10.7,0.5,23.2c0,22.2,36.5,45.3,45,55.9C53.5,67.3,90.5,46.3,90.5,23.2z"
+                            stroke="rgb(235, 89, 113)" fill="rgb(235, 89, 113)"/>
+                </svg>
+
+                <div class="click-text">hover over <br> the text</div>
+
+                <div class="elements">
+                    <span class="bounce">D</span><span class="bounce">a</span><span class="bounce">t</span><span class="bounce">i</span><span class="bounce">n</span><span class="bounce">g</span>
+                    <span class="bounce">i</span><span class="bounce">n</span>
+                    <span class="bounce">B</span><span class="bounce">Y</span><span class="bounce">U</span><span class="bounce">-</span><span class="bounce">I</span><span class="bounce">S</span>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="main-content">
+        <h2>Welcome to the BYU Information Systems Dating Site</h2>
+            <form>
+                <input type="text" id="phrase" placeholder="What is the love phrase?" autofocus>
+                <input type="text" id="first-person" placeholder="Enter the person's first and last name">
+                <input type="text" id="second-person" placeholder="Enter the second person's first and last name">
+                <div class="check-holder">
+                    <div class="radio">
+                        <input type="checkbox" id="communicate" class="check">
+                        <label for="communicate">We will communicate often</label>
+                    </div>
+                    <div class="radio">
+                        <input type="checkbox" id="selfish" class="check">
+                        <label for="selfish">We will not be selfish</label>
+                    </div>
+                    <div class="radio">
+                        <input type="checkbox" id="serve" class="check">
+                        <label for="serve">We will serve each other</label>
+                    </div>              
+                    <div class="radio">
+                        <input type="checkbox" id="friend" class="check">
+                        <label for="friend">My spouse will be my best friend</label>
+                    </div>
+                    <div class="radio">
+                        <input type="checkbox" id="remember" class="check">
+                        <label for="remember">We will remember God</label>
+                    </div>
+                </div>
+
+                <div class="select-button">
+                    <button type="button" onclick="calculateLove()">Click Me</button>
+                    <button type="button" onclick="resetInput()">Reset</button>
+                </div>
+            </form>
+            
+        <div class="heart-container">
+            <div id="show-the-love"></div>
+            <p id="output"></p>
+        </div>
+    </div>
+
+    <script>
+        var bounceElements = document.getElementsByClassName("bounce");
+
+        for(var i = 0; i < bounceElements.length; i++) {
+
+            bounceElements[i].addEventListener("mouseout", function(event) {
+                event.target.className = "bounce-animation";
+
+                // Take away the animation class, return to normal
+                setTimeout(function() {
+                    event.target.className = "bounce";
+                }, 500);
+            });
+
+        }  
+    </script>
+</body>
+</html>

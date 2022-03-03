@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(253, 233, 237);
+    min-width: 830px;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header:hover .click-text {
+    opacity: 1;
+}
+.header {
+    font-size: 50px;
+    color: rgb(223, 37, 37);
+    padding: 100px;
+    position: relative;
+    width: 600px;
+    text-align: center;
+}
+.elements {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(10px);
+    animation: rise-header .75s ease-out forwards, fade .5s ease-out forwards;
+    animation-delay: .5s;
+}
+h1 {
+    font-size: 50px;
+    padding: 50px;
+}
+.click-text {
+    font-family: monospace;
+    font-size: 15px;
+    position: absolute;
+    bottom: 60px;
+    left: 0px;
+    color:rgba(250, 149, 166, 0.7);
+    text-align: center;
+    opacity: 0;
+    transition: .15s;
+}
+.click-text::after {
+    content: "->";
+    position: relative;
+    bottom: 10px;
+    left: 23px;
+}
+#heart1 {
+    position: absolute;
+    transform: rotate(-30deg) scale(.5);
+    top: -25px;
+    left: 88px;
+    opacity: 0;
+    animation: fade 1s ease-out forwards;
+    animation-delay: .75s;
+}
+#heart2 {
+    position: absolute;
+    transform: rotate(-50deg) scale(.25);
+    top: 5px;
+    left: 40px; 
+    opacity: 0;
+    animation: fade 1s ease-out forwards;
+    animation-delay: .75s;
+}
+#heart3 {
+    position: absolute;
+    transform: rotate(20deg) scale(.25);
+    bottom: -8px;
+    right: 13px;
+    opacity: 0;
+    animation: fade 1s ease-out forwards;
+    animation-delay: .75s;
+}
+#heart4 {
+    position: absolute;
+    transform: rotate(-15deg) scale(.5);
+    bottom: -34px;
+    right: 0px;
+    opacity: 0;
+    animation: fade 1s ease-out forwards;
+    animation-delay: .75s;
+}
+.main-content {
+    width: 80%;
+    margin: 0 auto;
+    
+}
+h2 {
+    margin: 20px 0 40px 0;
+    padding: 10px;
+    text-align: center;
+    color: rgb(223, 37, 37);
+    transform: translateY(10px);
+    opacity: 0;
+    animation: rise .75s ease-out forwards, fade .5s ease-out forwards;
+    animation-delay: 1s
+}
+.check-holder {
+    align-self: flex-start;
+}
+form {
+    width: 400px;
+    margin: 0 auto 100px auto;
+    padding: 60px 100px ;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .25s;
+    box-shadow: 0px 5px 15px rgb(255, 173, 173);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: rise .75s ease-out forwards, fade .5s ease-out forwards;
+    animation-delay: 1.25s;
+}
+.radio {
+    margin: 20px 0;
+    font-size: 20px;
+}
+input[type=text] {
+    font: inherit;
+    font-size: 18px;
+    color: red;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid pink;
+    display: block;
+    margin: 10px;
+    width: 100%;
+    background-color: rgb(253, 233, 237);
+}
+input[type=text]:focus {
+    outline: none;
+}
+::-webkit-input-placeholder {
+    color: pink;
+    transition: .25s;
+}
+input:hover::-webkit-input-placeholder {
+    color: red;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: pink;
+    border: 2px solid rgb(235, 89, 113);
+    cursor: pointer;
+    transition: .15s;
+    transform: translateY(3px);
+}
+input[type=checkbox]:hover {
+    background-color: rgb(255, 152, 170);
+}
+input[type=checkbox]:checked {
+    background-color: rgb(235, 89, 113);
+}
+label {
+    padding-left: 10px;
+    cursor: pointer;
+}
+.select-button {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: rgb(235, 89, 113);
+    color: #eee;
+    font: inherit;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .25s;
+    width: 47%;
+    
+}
+
+button:hover {
+    background-color: rgb(202, 61, 61);
+}
+.heart-container {
+    position: fixed;
+    padding: 20px;
+    right: 0px;
+    bottom: 0px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+#output {
+    color: rgb(223, 37, 37);
+}
+
+.bounce {
+    display: inline-block;
+    padding: 20px 0 20px 0;
+    transition: color .15s ease-out, transform .15s ease-in;
+}
+.bounce:hover {
+    transform: scale(1.15);
+}
+.bounce-animation {
+    display: inline-block;
+    transition: color .15s ease-out;
+    animation: bounce-animation .5s ease-in-out;
+}
+.elements {
+    cursor: default;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes rise-header {
+    0% {
+        transform: translateY(10px) translate(-50%, -50%);
+    }
+    100% {
+        transform: translateY(0px) translate(-50%, -50%);
+    }
+}
+@keyframes rise {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes bounce-animation {
+    30% {
+        transform: scale(1, 1.5) translateY(-5px);
+    }
+    50% {
+        transform: scale(1.5,1) translateY(0px);
+    }
+    70% {
+        transform: scale(1,1.2) translateY(-5px);
+    }
+    87% {
+        transform: scale(1.2,1) translateY(0px);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
